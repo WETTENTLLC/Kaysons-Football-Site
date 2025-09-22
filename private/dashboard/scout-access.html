@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Access - Kayson D Smith</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body class="dashboard scout-view">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith - Scout Portal</div>
+            <ul class="nav-menu">
+                <li><a href="scout-access.html" class="active">Overview</a></li>
+                <li><a href="../login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="scout-header">
+                <h1>Scout & Coach Access Portal</h1>
+                <p>Read-only access to training progress and performance metrics</p>
+            </div>
+
+            <div class="scout-grid">
+                <div class="performance-summary">
+                    <h2>Current Performance Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h4>40-Yard Dash</h4>
+                            <div class="metric-value">4.30s</div>
+                            <div class="metric-date">Latest: Dec 1, 2023</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Vertical Jump</h4>
+                            <div class="metric-value">38.5"</div>
+                            <div class="metric-date">Latest: Nov 28, 2023</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>20-Yard Shuttle</h4>
+                            <div class="metric-value">4.15s</div>
+                            <div class="metric-date">Latest: Nov 25, 2023</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>3-Cone Drill</h4>
+                            <div class="metric-value">6.85s</div>
+                            <div class="metric-date">Latest: Nov 20, 2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="training-overview">
+                    <h2>Training Schedule Overview</h2>
+                    <div class="schedule-summary">
+                        <div class="schedule-item">
+                            <h4>Weekly Training Volume</h4>
+                            <p>6 sessions per week, 1 rest day</p>
+                        </div>
+                        <div class="schedule-item">
+                            <h4>Focus Areas</h4>
+                            <ul>
+                                <li>Speed & Agility Development</li>
+                                <li>Coverage Technique Refinement</li>
+                                <li>Ball Skills Enhancement</li>
+                                <li>Combine Preparation</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-item">
+                            <h4>Training Adherence</h4>
+                            <p>87% completion rate (last 30 days)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-trends">
+                    <h2>6-Month Progress Trends</h2>
+                    <div class="trend-summary">
+                        <div class="trend-item positive">
+                            <h4>40-Yard Dash</h4>
+                            <p>Improved by 0.08s (4.50s → 4.42s)</p>
+                        </div>
+                        <div class="trend-item positive">
+                            <h4>Vertical Jump</h4>
+                            <p>Increased by 3.5" (35" → 38.5")</p>
+                        </div>
+                        <div class="trend-item positive">
+                            <h4>Agility</h4>
+                            <p>20-yard shuttle improved by 0.12s</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-section">
+                    <h2>Coach Feedback</h2>
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group">
+                            <label for="coachName">Your Name</label>
+                            <input type="text" id="coachName" name="coachName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="school">School/Organization</label>
+                            <input type="text" id="school" name="school" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Feedback Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="technique">Technique Assessment</option>
+                                <option value="athleticism">Athletic Ability</option>
+                                <option value="potential">Development Potential</option>
+                                <option value="character">Character/Work Ethic</option>
+                                <option value="fit">Program Fit</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback">Feedback</label>
+                            <textarea id="feedback" name="feedback" rows="5" required placeholder="Please provide your professional assessment and any recommendations..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </form>
+                </div>
+
+                <div class="previous-feedback">
+                    <h2>Previous Feedback</h2>
+                    <div class="feedback-list">
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <h4>Coach Johnson - State University</h4>
+                                <span class="feedback-date">Nov 15, 2023</span>
+                            </div>
+                            <div class="feedback-category">Technique Assessment</div>
+                            <p>"Excellent press coverage technique and natural ball skills. Shows great instincts in coverage and has the speed to recover. Would fit well in our defensive scheme."</p>
+                        </div>
+                        
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <h4>Scout Williams - Regional Combine</h4>
+                                <span class="feedback-date">Oct 28, 2023</span>
+                            </div>
+                            <div class="feedback-category">Athletic Ability</div>
+                            <p>"Outstanding combine numbers with room for continued improvement. Explosive athlete with excellent change of direction. Top 10% of DBs evaluated this season."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/scout-access.js"></script>
+</body>
+</html>

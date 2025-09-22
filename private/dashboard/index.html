@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kayson D Smith</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body class="dashboard">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith - Training</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="calendar.html">Training Calendar</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="content-manager.html">Content Manager</a></li>
+                <li><a href="scout-access.html">Scout Access</a></li>
+                <li><a href="../login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="welcome-section">
+                <h1>Welcome back, Kayson!</h1>
+                <p>Track your progress and stay on top of your training schedule.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="metric-card">
+                    <h3>Training Adherence</h3>
+                    <div class="metric-value">87%</div>
+                    <div class="metric-label">This Week</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 87%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Workouts Completed</h3>
+                    <div class="metric-value">23</div>
+                    <div class="metric-label">This Month</div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>40-Yard Dash</h3>
+                    <div class="metric-value">4.30s</div>
+                    <div class="metric-label">Latest Time</div>
+                    <div class="metric-trend positive">↓ 0.03s</div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Vertical Jump</h3>
+                    <div class="metric-value">38.5"</div>
+                    <div class="metric-label">Latest Result</div>
+                    <div class="metric-trend positive">↑ 1.5"</div>
+                </div>
+            </div>
+
+            <div class="dashboard-sections">
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-date">Today</div>
+                            <div class="activity-content">
+                                <h4>Hip-Turn Gauntlet</h4>
+                                <p>Completed 3 sets with improved technique</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-date">Yesterday</div>
+                            <div class="activity-content">
+                                <h4>Speed & Agility Session</h4>
+                                <p>40-yard dash: 4.42s (new personal best)</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-date">2 days ago</div>
+                            <div class="activity-content">
+                                <h4>Coverage Drills</h4>
+                                <p>Worked on press coverage and backpedal technique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-workouts">
+                    <h2>Upcoming Workouts</h2>
+                    <div class="workout-list">
+                        <div class="workout-item">
+                            <div class="workout-date">Tomorrow</div>
+                            <div class="workout-content">
+                                <h4>Ball Skills Training</h4>
+                                <p>Focus on high-point catches and tracking</p>
+                            </div>
+                        </div>
+                        <div class="workout-item">
+                            <div class="workout-date">Friday</div>
+                            <div class="workout-content">
+                                <h4>Combine Prep</h4>
+                                <p>Full combine simulation with timing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

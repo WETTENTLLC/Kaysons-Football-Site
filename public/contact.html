@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kayson D Smith</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="highlights.html">Highlights</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact Information</h1>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Primary Contact</h3>
+                    <div class="contact-card">
+                        <h4>[Your Name]</h4>
+                        <p><strong>Relationship:</strong> [Guardian/Uncle/etc.]</p>
+                        <p><strong>Email:</strong> <a href="mailto:[your.email@example.com]">[your.email@example.com]</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:[your-phone]">[Your Phone Number]</a></p>
+                        <p><strong>Best Time to Call:</strong> Weekdays 6-8 PM, Weekends 10 AM - 6 PM</p>
+                    </div>
+
+                    <h3>High School Coach</h3>
+                    <div class="contact-card">
+                        <h4>[Coach Name]</h4>
+                        <p><strong>Position:</strong> Head Coach / Defensive Coordinator</p>
+                        <p><strong>School:</strong> [High School Name]</p>
+                        <p><strong>Email:</strong> <a href="mailto:[coach.email@school.edu]">[coach.email@school.edu]</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:[coach-phone]">[Coach Phone Number]</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="title">Title/Position</label>
+                            <input type="text" id="title" name="title" placeholder="e.g., Recruiting Coordinator">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="school">School/Organization</label>
+                            <input type="text" id="school" name="school">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please include any specific questions about Kayson D Smith or requests for additional information."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    
+                    <p class="form-note">
+                        <strong>Note:</strong> This form sends inquiries directly to [Your Name] and [Coach Name]. 
+                        We typically respond within 24 hours during the recruiting season.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

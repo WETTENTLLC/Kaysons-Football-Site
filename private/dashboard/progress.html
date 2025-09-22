@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking - Kayson D Smith</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith - Training</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="calendar.html">Training Calendar</a></li>
+                <li><a href="progress.html" class="active">Progress</a></li>
+                <li><a href="content-manager.html">Content Manager</a></li>
+                <li><a href="scout-access.html">Scout Access</a></li>
+                <li><a href="../login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <h1>Progress Tracking</h1>
+            
+            <div class="progress-grid">
+                <div class="chart-container">
+                    <h3>40-Yard Dash Progress</h3>
+                    <canvas id="fortyYardChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Vertical Jump Progress</h3>
+                    <canvas id="verticalJumpChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Training Adherence</h3>
+                    <canvas id="adherenceChart"></canvas>
+                </div>
+
+                <div class="data-entry">
+                    <h3>Log New Results</h3>
+                    <form id="progressForm" class="progress-form">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="metric">Metric</label>
+                            <select id="metric" name="metric" required>
+                                <option value="">Select Metric</option>
+                                <option value="40yard">40-Yard Dash</option>
+                                <option value="vertical">Vertical Jump</option>
+                                <option value="broad">Broad Jump</option>
+                                <option value="shuttle">20-Yard Shuttle</option>
+                                <option value="cone">3-Cone Drill</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="value">Result</label>
+                            <input type="text" id="value" name="value" placeholder="e.g., 4.42 or 38.5" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea id="notes" name="notes" placeholder="Conditions, feelings, observations..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Log Result</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="recent-results">
+                <h2>Recent Results</h2>
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Metric</th>
+                            <th>Result</th>
+                            <th>Change</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTableBody">
+                        <tr>
+                            <td>2023-12-01</td>
+                            <td>40-Yard Dash</td>
+                            <td>4.30s</td>
+                            <td class="positive">-0.15s</td>
+                            <td>Perfect conditions, felt strong</td>
+                        </tr>
+                        <tr>
+                            <td>2023-11-28</td>
+                            <td>Vertical Jump</td>
+                            <td>38.5"</td>
+                            <td class="positive">+1.5"</td>
+                            <td>New personal best!</td>
+                        </tr>
+                        <tr>
+                            <td>2023-11-25</td>
+                            <td>20-Yard Shuttle</td>
+                            <td>4.15s</td>
+                            <td class="positive">-0.05s</td>
+                            <td>Improved footwork showing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/progress.js"></script>
+</body>
+</html>

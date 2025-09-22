@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Calendar - Kayson D Smith</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body class="dashboard">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith - Training</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="calendar.html" class="active">Training Calendar</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="content-manager.html">Content Manager</a></li>
+                <li><a href="scout-access.html">Scout Access</a></li>
+                <li><a href="../login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="calendar-header">
+                <h1>Training Calendar</h1>
+                <div class="calendar-controls">
+                    <button id="prevWeek" class="btn btn-small">← Previous</button>
+                    <span id="currentWeek">Week of December 4, 2023</span>
+                    <button id="nextWeek" class="btn btn-small">Next →</button>
+                </div>
+            </div>
+
+            <div class="calendar-grid" id="calendar">
+                <div class="calendar-day">
+                    <div class="day-header">Monday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="speed-agility">
+                            <h4>Speed & Agility</h4>
+                            <p>40-yard dash, cone drills</p>
+                            <input type="checkbox" class="workout-checkbox">
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Tuesday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="coverage-drills">
+                            <h4>Coverage Drills</h4>
+                            <p>Press coverage, backpedal</p>
+                            <input type="checkbox" class="workout-checkbox" checked>
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Wednesday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="ball-skills">
+                            <h4>Ball Skills</h4>
+                            <p>High-point catches, tracking</p>
+                            <input type="checkbox" class="workout-checkbox">
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Thursday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="strength">
+                            <h4>Strength Training</h4>
+                            <p>Lower body focus</p>
+                            <input type="checkbox" class="workout-checkbox">
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Friday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="combine-prep">
+                            <h4>Combine Prep</h4>
+                            <p>Full simulation</p>
+                            <input type="checkbox" class="workout-checkbox">
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Saturday</div>
+                    <div class="day-content">
+                        <div class="workout-item" data-workout="film-study">
+                            <h4>Film Study</h4>
+                            <p>Technique analysis</p>
+                            <input type="checkbox" class="workout-checkbox">
+                            <button class="workout-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="day-header">Sunday</div>
+                    <div class="day-content">
+                        <div class="rest-day">Rest Day</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="workoutModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="workoutDetails"></div>
+                    <div class="workout-notes">
+                        <h4>Personal Notes</h4>
+                        <textarea id="workoutNotes" placeholder="Add your notes about this workout..."></textarea>
+                        <button class="btn btn-primary" onclick="saveNotes()">Save Notes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Manager - Kayson D Smith</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body class="dashboard">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Kayson D Smith - Training</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="calendar.html">Training Calendar</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="content-manager.html" class="active">Content Manager</a></li>
+                <li><a href="scout-access.html">Scout Access</a></li>
+                <li><a href="../login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <h1>Content Manager</h1>
+            
+            <div class="content-tabs">
+                <button class="tab-btn active" onclick="showTab('stats')">Update Stats</button>
+                <button class="tab-btn" onclick="showTab('media')">Media Upload</button>
+                <button class="tab-btn" onclick="showTab('profile')">Profile Info</button>
+                <button class="tab-btn" onclick="showTab('news')">Add News</button>
+            </div>
+
+            <div id="stats-tab" class="tab-content active">
+                <div class="content-section">
+                    <h2>Update Performance Stats</h2>
+                    <form id="statsForm" class="stats-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fortyTime">40-Yard Dash (seconds)</label>
+                                <input type="number" id="fortyTime" step="0.01" value="4.30">
+                            </div>
+                            <div class="form-group">
+                                <label for="verticalJump">Vertical Jump (inches)</label>
+                                <input type="number" id="verticalJump" step="0.5" value="38.5">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="broadJump">Broad Jump (inches)</label>
+                                <input type="number" id="broadJump" step="0.5" value="122">
+                            </div>
+                            <div class="form-group">
+                                <label for="shuttle">20-Yard Shuttle (seconds)</label>
+                                <input type="number" id="shuttle" step="0.01" value="4.15">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cone">3-Cone Drill (seconds)</label>
+                                <input type="number" id="cone" step="0.01" value="6.85">
+                            </div>
+                            <div class="form-group">
+                                <label for="height">Height</label>
+                                <input type="text" id="height" value="6'1&quot;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Stats</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="media-tab" class="tab-content">
+                <div class="content-section">
+                    <h2>Upload Media</h2>
+                    
+                    <div class="upload-section">
+                        <h3>Highlight Videos</h3>
+                        <form id="videoForm" class="upload-form">
+                            <div class="form-group">
+                                <label for="videoTitle">Video Title</label>
+                                <input type="text" id="videoTitle" placeholder="e.g., 2024 Season Highlights">
+                            </div>
+                            <div class="form-group">
+                                <label for="videoUrl">Video URL (Vimeo/YouTube)</label>
+                                <input type="url" id="videoUrl" placeholder="https://vimeo.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label for="videoDescription">Description</label>
+                                <textarea id="videoDescription" placeholder="Brief description of the video content"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Video</button>
+                        </form>
+                    </div>
+
+                    <div class="upload-section">
+                        <h3>Photos</h3>
+                        <form id="photoForm" class="upload-form">
+                            <div class="form-group">
+                                <label for="photoUpload">Upload Photo</label>
+                                <input type="file" id="photoUpload" accept="image/*" multiple>
+                            </div>
+                            <div class="form-group">
+                                <label for="photoCaption">Caption</label>
+                                <input type="text" id="photoCaption" placeholder="Photo caption">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload Photos</button>
+                        </form>
+                    </div>
+
+                    <div class="media-gallery">
+                        <h3>Current Media</h3>
+                        <div id="mediaList" class="media-grid"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-tab" class="tab-content">
+                <div class="content-section">
+                    <h2>Profile Information</h2>
+                    <form id="profileForm" class="profile-form">
+                        <div class="form-group">
+                            <label for="bio">Bio/Description</label>
+                            <textarea id="bio" rows="4">Elite cornerback with exceptional coverage skills and ball-hawking ability. Proven track record of shutting down top receivers with superior technique and football IQ.</textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gpa">GPA</label>
+                                <input type="number" id="gpa" step="0.01" value="3.8">
+                            </div>
+                            <div class="form-group">
+                                <label for="satScore">SAT Score</label>
+                                <input type="number" id="satScore" value="1240">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="intendedMajor">Intended Major</label>
+                            <input type="text" id="intendedMajor" value="Sports Management / Business">
+                        </div>
+                        <div class="form-group">
+                            <label for="achievements">Recent Achievements</label>
+                            <textarea id="achievements" rows="3">All-State First Team Selection, Academic All-Conference Team</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="news-tab" class="tab-content">
+                <div class="content-section">
+                    <h2>Add News Article</h2>
+                    <form id="newsForm" class="news-form">
+                        <div class="form-group">
+                            <label for="newsTitle">Article Title</label>
+                            <input type="text" id="newsTitle" placeholder="e.g., Player of the Week Award">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsDate">Date</label>
+                            <input type="date" id="newsDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsContent">Article Content</label>
+                            <textarea id="newsContent" rows="5" placeholder="Write your news article content here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="newsLink">External Link (optional)</label>
+                            <input type="url" id="newsLink" placeholder="https://...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Publish Article</button>
+                    </form>
+
+                    <div class="news-preview">
+                        <h3>Recent Articles</h3>
+                        <div id="newsList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/content-manager.js"></script>
+</body>
+</html>
